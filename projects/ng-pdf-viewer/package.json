@@ -1,6 +1,6 @@
 {
   "name": "@letsprogram/ng-pdf-viewer",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "peerDependencies": {
     "@angular/common": "^21.2.0",
     "@angular/core": "^21.2.0",
