@@ -1,0 +1,91 @@
+name: Bug report
+description: Report a reproducible problem in @letsprogram/ng-pdf-viewer
+title: '[Bug]: '
+labels: ['bug', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill out all required fields to help us reproduce and fix quickly.
+
+  - type: input
+    id: library-version
+    attributes:
+      label: Library version
+      description: Version of @letsprogram/ng-pdf-viewer you are using
+      placeholder: e.g. 0.0.6
+    validations:
+      required: true
+
+  - type: input
+    id: angular-version
+    attributes:
+      label: Angular version
+      placeholder: e.g. 21.2.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Browser(s)
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction link
+      description: StackBlitz or minimal public repository link
+      placeholder: https://stackblitz.com/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Install package
+        2. Render ng-pdf-viewer with ...
+        3. Click ...
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      render: shell
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have searched existing issues and did not find a duplicate.
+          required: true
+        - label: I can reproduce this issue on the latest version.
+          required: true

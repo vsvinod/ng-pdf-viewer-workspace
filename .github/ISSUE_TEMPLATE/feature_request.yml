@@ -1,0 +1,49 @@
+name: Feature request
+description: Suggest a new idea or enhancement for @letsprogram/ng-pdf-viewer
+title: '[Feature]: '
+labels: ['enhancement', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Please describe the problem and the proposed solution clearly.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What use case are you trying to solve?
+      placeholder: I cannot do X when Y because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: I'd like an API like...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Existing workarounds or alternative approaches
+
+  - type: textarea
+    id: api
+    attributes:
+      label: Suggested API (optional)
+      placeholder: |
+        <ng-pdf-viewer [someInput]="..." />
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have searched existing issues and discussions before submitting.
+          required: true
+        - label: I am willing to help test or validate this feature.
+          required: false

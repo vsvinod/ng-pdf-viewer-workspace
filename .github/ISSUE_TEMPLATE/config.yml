@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability report
+    url: mailto:letsprogram30@gmail.com
+    about: Please report security vulnerabilities privately via email.
+  - name: Discussions
+    url: https://github.com/yshashi/ng-pdf-viewer-workspace/discussions
+    about: Ask questions and discuss ideas with the community.

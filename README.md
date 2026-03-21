@@ -1,59 +1,59 @@
-# NgPdfViewerWorkspace
+# @letsprogram/ng-pdf-viewer Workspace
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Open-source Angular workspace for building and publishing [`@letsprogram/ng-pdf-viewer`](https://www.npmjs.com/package/@letsprogram/ng-pdf-viewer), a standalone PDF viewer component powered by `@embedpdf/snippet`.
 
-## Development server
+## Packages and Projects
 
-To start a local development server, run:
+- `projects/ng-pdf-viewer`: publishable Angular library
+- `projects/test-app`: local app to test the library during development
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Quick Start
 
 ```bash
-ng generate component component-name
+pnpm install
+pnpm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Then open `http://localhost:4200/`.
+
+## Useful Commands
 
 ```bash
-ng generate --help
+# Run local dev server
+pnpm start
+
+# Build all projects
+pnpm run build
+
+# Build only the library
+pnpm run build:lib
+
+# Run tests
+pnpm test
+
+# Publish built library (maintainers)
+pnpm run publish:lib
 ```
 
-## Building
+## Open Source and Community
 
-To build the project run:
+- License: [MIT](LICENSE)
+- Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Code of conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- Security policy: [SECURITY.md](SECURITY.md)
+- Changelog: [CHANGELOG.md](CHANGELOG.md)
+- Bug reports and feature requests: use [GitHub Issues](https://github.com/yshashi/ng-pdf-viewer-workspace/issues)
 
-```bash
-ng build
-```
+## CI
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+GitHub Actions CI runs on every push and pull request to `main` and validates:
 
-## Running unit tests
+- dependency installation (`pnpm install --frozen-lockfile`)
+- library build (`pnpm run build:lib`)
+- tests (`pnpm test --watch=false`)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Library Docs
 
-```bash
-ng test
-```
+Library-focused API and usage documentation is available in:
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [projects/ng-pdf-viewer/README.md](projects/ng-pdf-viewer/README.md)
