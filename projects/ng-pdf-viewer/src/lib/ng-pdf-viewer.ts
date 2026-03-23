@@ -38,6 +38,7 @@ export class NgPdfViewer {
   readonly config = input<NgPdfViewerConfig | undefined>();
 
   onReady = output<EmbedPdfContainer>();
+  onError = output<Error>();
 
   pdfContainer = signal<EmbedPdfContainer | undefined>(undefined);
 
@@ -78,7 +79,22 @@ export class NgPdfViewer {
       return;
     }
 
-    const { default: EmbedPDF } = await import('@embedpdf/snippet');
+    let EmbedPDF: Awaited<typeof import('@embedpdf/snippet')>['default'];
+    try {
+      ({ default: EmbedPDF } = await import('@embedpdf/snippet'));
+    } catch (importError: unknown) {
+      const error = new Error(
+        `[NG_PDF_VIEWER] Failed to import EmbedPDF library: ${
+          importError instanceof Error ? importError.message : String(importError)
+        }`,
+        {
+          cause: importError instanceof Error ? importError : undefined,
+        },
+      );
+      console.error(error);
+      this.onError.emit(error);
+      return;
+    }
 
     if (this.destroyed()) {
       return;
